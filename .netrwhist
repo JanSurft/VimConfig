@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home'
+let g:netrw_dirhist_2='/home/jan'
+let g:netrw_dirhist_3='/home/jan/workspace'
+let g:netrw_dirhist_4='/home/jan/workspace/haskell'
+let g:netrw_dirhist_5='/home/jan/workspace/haskell/uni'
+let g:netrw_dirhist_6='/home/jan/workspace/haskell/uni/ex0'
+let g:netrw_dirhist_7='/home/jan'
