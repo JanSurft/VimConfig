@@ -39,6 +39,7 @@ Plugin 'eagletmt/neco-ghc'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'mpickering/hlint-refactor-vim'
 
+" Prolog
 Plugin 'adimit/prolog.vim'
 
 Plugin 'vim-scripts/indentpython.vim'
@@ -105,7 +106,8 @@ if &listchars ==# 'eol:$'
   autocmd FileType haskell set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
 
-
+let g:netrw_sort_sequence = '[\/]$,\<core\%(\.\d\+\)\=,\.[a-np-z]$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$'
+" let g:netrew_sort_sequence = '*'
 
 " explorer
 map <leader>e :Explore<cr>
@@ -124,7 +126,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-map <leader>v v<C-H>:vertical resize 25<CR><C-L>
 
 set pastetoggle=<leader>z
 
@@ -133,9 +134,11 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
-"nnoremap <leader>v v<C-h>:vertical resize 35<CR><C-l>
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 autocmd FileType cpp let g:ycm_key_list_select_completion = ['<TAB>','<Down>','<Enter>']
+
+map <leader>v v<C-H>:vertical resize 35<CR><C-L>
 
 inoremap <C-C> <C-X><C-O>
 
@@ -175,6 +178,12 @@ let g:syntastic_check_on_wq = 0
 
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
+if has('gui_running')
+  set grepprg=grep\ -nH\ $*
+  filetype indent on
+  let g:tex_flavor='latex'
+endif 
+
 if has("gui_running")
   imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
 else " no gui
@@ -194,7 +203,9 @@ set nowb
 set noswapfile
 
 " use spaces instead of tabs
-set expandtab
+autocmd FileType haskell set expandtab
+
+let g:syntastic_prolog_checkers = ['swipl']
 
 " be smart when using tabs
 set smarttab
@@ -207,15 +218,9 @@ vmap <leader>d "*d
 nmap <leader>p "*p
 vmap <leader>p "*p
 
-set shiftwidth=4
-set tabstop=4
-
-
 " 1 tab = 2 spaces
 autocmd FileType haskell set shiftwidth=2
 autocmd FileType haskell set tabstop=2
-
-
 
 "set aij
 "set si
@@ -234,6 +239,10 @@ set cindent
 "set shiftwidth=4
 set nu
 
+set tabstop=4
+set shiftwidth=4
+set nu
+
 autocmd FileType haskell let &formatprg="hindent --tab-size 2 -XQuasiQuotes"
 
 let g:haskell_tabular = 1
@@ -243,3 +252,25 @@ let g:haskell_tabular = 1
 let g:haskell_conceal_wide = 1
 let g:haskell_conceal_enumerations = 1
 let hscoptions="𝐒𝐓𝐄𝐌xRtB𝔻w"
+
+
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+let python_highlight_all=1
+
+autocmd FileType tex setlocal breakindent "showbreak=..
+autocmd FileType tex setlocal linebreak
+autocmd FileType tex setlocal foldmethod=indent foldcolumn=4
+autocmd FileType tex setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType tex setlocal spell
+autocmd FileType tex setlocal spelllang=de
