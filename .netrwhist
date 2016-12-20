@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/jan/workspace/Algo2/blatt1/bfs'
+let g:netrw_dirhist_2='/home/jan/workspace/ComputerGraphics/cg_exercise_03/03_textures'
+let g:netrw_dirhist_3='/home/jan/workspace/ComputerGraphics/cg_exercise_03/03_textures/src'
+let g:netrw_dirhist_4='/home/jan/workspace/ComputerGraphics/cg_exercise_03/03_textures'
+let g:netrw_dirhist_5='/home/jan/workspace/spielphase'
+let g:netrw_dirhist_6='/home/jan/workspace/Algo2/blatt1/bfs'
