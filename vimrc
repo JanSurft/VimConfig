@@ -138,7 +138,8 @@ map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 autocmd FileType cpp let g:ycm_key_list_select_completion = ['<TAB>','<Down>','<Enter>']
 
-map <leader>v v<C-H>:vertical resize 35<CR><C-L>
+"map <leader>v v<C-H>:vertical resize 35<CR><C-L>
+map <leader>v v:exec 'vertical resize '. string(&columns * 0.8)<CR>
 
 inoremap <C-C> <C-X><C-O>
 
