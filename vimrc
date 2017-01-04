@@ -121,6 +121,9 @@ noremap <leader>q :q<cr>
 nnoremap <leader>bn :bn<cr>
 inoremap <leader>bn <ESC>:bn<cr>i
 
+nnoremap <leader>bd :bd<cr>
+inoremap <leader>bd <ESC>:bd<cr>i
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -176,14 +179,14 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
-
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
-if has('gui_running')
+
+"if has('gui_running')
   set grepprg=grep\ -nH\ $*
   filetype indent on
   let g:tex_flavor='latex'
-endif 
+"endif 
 
 if has("gui_running")
   imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
@@ -230,16 +233,21 @@ autocmd FileType haskell set tabstop=2
 syntax on
 syntax enable
 set background=dark
-se t_Co=16
+"set t_Co=16
+set t_Co=256
 set tags=./tags;/
 colorscheme solarized
 
+set grepprg=grep\ -nH\ $*
+
+let g:solarized_bold = 1
+let g:solarized_underline = 1 
+let g:solarized_italic = 1
+let g:solarized_contrast = "high"
+let g:solarized_visibility= "high"
+
 set encoding=utf-8
 set cindent
-"set tabstop=4
-"set shiftwidth=4
-set nu
-
 set tabstop=4
 set shiftwidth=4
 set nu
@@ -269,9 +277,20 @@ EOF
 
 let python_highlight_all=1
 
+set breakindent "showbreak=..
+set linebreak
+"set foldmethod=indent foldcolumn=4
+set shiftwidth=4 tabstop=4 softtabstop=4 " expandtab
+
 autocmd FileType tex setlocal breakindent "showbreak=..
 autocmd FileType tex setlocal linebreak
 autocmd FileType tex setlocal foldmethod=indent foldcolumn=4
 autocmd FileType tex setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType tex setlocal spell
 autocmd FileType tex setlocal spelllang=de
+autocmd FileType tex setlocal background=light
+
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'cd build && make clean && find . -delete && cmake .. && make && mv $*.pdf ..'
+
+"'./build.sh' "'mkdir -p build && pdflatex -output-directory=build -interaction=nonstopmode $* && cp *.bib build && cd build && bibtex %:r && cd .. && pdflatex -output-directory=build -interaction=nonstopmode $* && mv build/$*.pdf .'
