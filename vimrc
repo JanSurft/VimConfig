@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tikhomirov/vim-glsl'
 
 Plugin 'tpope/vim-fugitive'
 
