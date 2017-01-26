@@ -1,19 +1,20 @@
-# Prolog integration for Vim
+# HOW TO : UBUNTU
 
-Prolog is lacking any sort of functional IDE, besides maybe the Emacs-integration that comes with SWI and Sicstus. Vim has traditionally not been a good editor for Prolog. In fact, it is close to being nothing more than a plain text editor for Prolog.
+- back up your vim settings
+- eg. via `mv .vim .vim.$(date +%d_%m_%Y).bak` and `mv .vimrc .vimrc.$(date +%d_%m_%Y).bak`
+- clone this repo into your home via `git clone https://github.com/JanSurft/VimConfig.git ~/.vim`
+- clone vundle into your .vim via `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+- start vim
+- then execute the cmd `:PluginInstall` this might take a while (especially YouCompleteMe)
 
-These files seek to change this. Copy them into your `$VIM_RUNTIME` or just `~/.vim`, preserving the directory structure.
+## FOR C Autocompletion
+Do enable auto completion (including C languages)
 
-The files are public domain.
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.py --clang-completer
+    
+If this fails refer to https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64 for detailed explenation
 
-## Maintenance
+Finished
 
-Note: I am no longer using Vim, or Prolog on a regular basis. Therefore I can no longer improve this package, but I will accept patches. (June 2014)
 
-## Feature Highlights
-
-- Accounts for pretty much all of Prolog syntax (including DCGs)
-- Syntactical hints for folding
-- Accounts for the full set of ISO built-in predicates and operators
-- Also features the full set of SWI built-ins.
-- gorgeous fruit-salad-fu for your Prolog
