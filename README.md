@@ -17,4 +17,9 @@ If this fails refer to https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x6
 
 Finished
 
+## FOR LATEX SUPPORT
+If you want to work on .tex files with vim
+
+    sudo apt install vim-latexsuite
+
 
