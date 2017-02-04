@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tikhomirov/vim-glsl'
-
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'altercation/vim-colors-solarized'
