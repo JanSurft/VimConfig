@@ -10,6 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tikhomirov/vim-glsl'
 
@@ -46,6 +48,9 @@ Plugin 'adimit/prolog.vim'
 Plugin 'vim-scripts/indentpython.vim'
 
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" VALA
+Plugin 'arrufat/vala.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,6 +92,14 @@ map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 " EXPLORER NAGIVATION SETTINGS
 let g:netrw_liststyle=3
 "let g:netrw_hide=1
+
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " makes every newly opened buffer appear in a new tab
 " :au BufAdd,BufNewFile * nested tab sball
