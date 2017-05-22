@@ -1,4 +1,6 @@
-source includes/vundle.vim
+let $VIMHOME = $HOME."/.vim"
+
+source $VIMHOME/includes/vundle.vim
 
 " Return to last edit position when opening files (You want this!)
 augroup last_edit
