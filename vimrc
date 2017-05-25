@@ -227,6 +227,8 @@ set linebreak
 "set foldmethod=indent foldcolumn=4
 set shiftwidth=4 tabstop=4 softtabstop=4 " expandtab
 
+set laststatus=2
+
 autocmd FileType tex setlocal breakindent "showbreak=..
 autocmd FileType tex setlocal linebreak
 autocmd FileType tex setlocal foldmethod=indent foldcolumn=4
