@@ -195,6 +195,7 @@ set cindent
 set tabstop=4
 set shiftwidth=4
 set nu
+set rnu
 
 autocmd FileType haskell let &formatprg="hindent --tab-size 2 -XQuasiQuotes"
 
