@@ -195,6 +195,7 @@ set cindent
 set tabstop=4
 set shiftwidth=4
 set nu
+set rnu
 
 autocmd FileType haskell let &formatprg="hindent --tab-size 2 -XQuasiQuotes"
 
@@ -225,6 +226,8 @@ set breakindent "showbreak=..
 set linebreak
 "set foldmethod=indent foldcolumn=4
 set shiftwidth=4 tabstop=4 softtabstop=4 " expandtab
+
+set laststatus=2
 
 autocmd FileType tex setlocal breakindent "showbreak=..
 autocmd FileType tex setlocal linebreak
