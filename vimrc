@@ -15,6 +15,9 @@ augroup END
 set splitbelow
 set splitright
 
+" enable project specific .vimrc's
+set exrc
+
 let g:netrw_banner=0
 let g:netrw_browse_split=4
 
