@@ -91,6 +91,7 @@ let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python': 1 }
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
@@ -247,6 +248,9 @@ autocmd FileType tex setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType tex setlocal spell
 autocmd FileType tex setlocal spelllang=de
 autocmd FileType tex setlocal background=light
+
+autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType markdown setlocal noai nocin nosi inde=
 
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'cd build && make clean && find . -delete && cmake .. && make && mv $*.pdf ..'
