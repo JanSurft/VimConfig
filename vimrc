@@ -91,7 +91,9 @@ let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python': 1 }
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_python_binary_path = '/usr/bin/python3.5'
+
+let g:syntastic_python_python_exec = '/usr/bin/python3.5'
 
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
