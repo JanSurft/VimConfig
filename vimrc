@@ -248,6 +248,9 @@ autocmd FileType tex setlocal spell
 autocmd FileType tex setlocal spelllang=de
 autocmd FileType tex setlocal background=light
 
+
+autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'cd build && make clean && find . -delete && cmake .. && make && mv $*.pdf ..'
 
