@@ -136,6 +136,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+"set list
 
 if has('gui_running')
   set grepprg=grep\ -nH\ $*
@@ -248,6 +250,7 @@ autocmd FileType tex setlocal spell
 autocmd FileType tex setlocal spelllang=de
 autocmd FileType tex setlocal background=light
 
+autocmd FileType markdown setlocal nofoldenable
 
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
