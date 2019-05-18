@@ -10,47 +10,40 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" GENERAL
 Plugin 'ctrlpvim/ctrlp.vim'
-
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tikhomirov/vim-glsl'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-fugitive'
-
-Plugin 'altercation/vim-colors-solarized'
-
-" Support bundles
-"Plugin 'jgdavey/tslime.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'ervandew/supertab'
-Plugin 'benekastah/neomake'
-Plugin 'vim-syntastic/syntastic'
-"Plugin 'moll/vim-bbye'
-"Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'vim-scripts/gitignore'
-
-
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'laurilehmijoki/haskellmode-vim'
-
-" Haskell
-Plugin 'bitc/vim-hdevtools'
-Plugin 'neovimhaskell/haskell-vim'
-Plugin 'enomsg/vim-haskellConcealPlus'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/neco-ghc'
-Plugin 'Twinside/vim-hoogle'
-Plugin 'mpickering/hlint-refactor-vim'
-
-" Prolog
-Plugin 'adimit/prolog.vim'
-
-Plugin 'vim-scripts/indentpython.vim'
-
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-syntastic/syntastic'
 
+" AUTOCOMPLETION
+Plugin 'Valloric/YouCompleteMe'
+
+" LATEX and PANDOC
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+" GIT
+Plugin 'tpope/vim-fugitive'
+
+" JAVASCRIPT
+Plugin 'pangloss/vim-javascript'
+
+" PYTHON
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'plytophogy/vim-virtualenv'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'nvie/vim-flake8'
+" Plugin 'davidhalter/jedi-vim'
+
+" RUST
+Plugin 'rust-lang/rust.vim', { 'for': 'rust' }
+Plugin 'racer-rust/vim-racer', { 'for': 'rust' }
+
+
+" COLORS
+Plugin 'altercation/vim-colors-solarized'
+
 
 
 call vundle#end()            " required
