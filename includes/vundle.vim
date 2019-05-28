@@ -18,9 +18,12 @@ Plugin 'vim-syntastic/syntastic'
 " AUTOCOMPLETION
 Plugin 'Valloric/YouCompleteMe'
 
-" LATEX and PANDOC
+" LATEX and PANDOC and MARKDOWN
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'dkarter/bullets.vim'
+Plugin 'gyim/vim-boxdraw'
+" Plugin 'ashisha/image.vim'
 
 " GIT
 Plugin 'tpope/vim-fugitive'

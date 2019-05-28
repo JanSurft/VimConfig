@@ -22,3 +22,5 @@ source $VIMHOME/includes/ycm.vim
 source $VIMHOME/includes/racer.vim
 
 source $VIMHOME/includes/syntastic.vim
+
+source $VIMHOME/includes/text.vim
