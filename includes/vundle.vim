@@ -45,9 +45,9 @@ Plugin 'racer-rust/vim-racer', { 'for': 'rust' }
 
 
 " COLORS
-Plugin 'altercation/vim-colors-solarized'
-
-
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'iCyMind/NeoSolarized'
+Plugin 'drewtempelmeyer/palenight.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
