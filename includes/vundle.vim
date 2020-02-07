@@ -35,8 +35,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'plytophogy/vim-virtualenv'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'nvie/vim-flake8'
+" Plugin 'tell-k/vim-autopep8'
+" Plugin 'nvie/vim-flake8'
 " Plugin 'davidhalter/jedi-vim'
 
 " RUST
