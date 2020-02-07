@@ -47,8 +47,6 @@ nnoremap <C-H> <C-W><C-H>
 
 set pastetoggle=<leader>z
 
-
-
 " Copy and paste to os clipboard
 nmap <leader>y "*y
 vmap <leader>y "*y
