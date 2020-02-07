@@ -5,4 +5,6 @@ setlocal shiftwidth=4
 setlocal expandtab
 setlocal autoindent
 setlocal fileformat=unix
+
+autocmd BufWritePre * %s/\s\+$//e
 nmap <leader>bd :bd<CR>

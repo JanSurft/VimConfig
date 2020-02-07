@@ -18,6 +18,9 @@ set splitright
 " enable project specific .vimrc's
 set exrc
 
+" enable true color support
+set termguicolors
+
 let g:netrw_banner=0
 let g:netrw_browse_split=4
 
@@ -89,11 +92,16 @@ set pastetoggle=<leader>z
 
 let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python': 1 }
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_python_binary_path = '/usr/bin/python3.5'
 
-let g:syntastic_python_python_exec = '/usr/bin/python3.5'
+" let g:ycm_python_binary_path = '/usr/bin/python3.5'
+let g:ycm_python_binary_path = 'python'
+
+" let g:syntastic_python_checkers = ['pylint', 'flake8', 'pep8']
+let g:syntastic_python_checkers = ['python', 'flake8', 'pylint', 'mypy']
+" let g:syntastic_python_python_exec = '/usr/bin/python3.5'
+let g:syntastic_python_python_exec = 'python'
 
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
@@ -130,6 +138,7 @@ map <Leader>t :SyntasticToggleMode<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{FugitiveStatusline()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
@@ -194,15 +203,17 @@ set background=dark
 "set t_Co=16
 set t_Co=256
 set tags=./tags;/
-colorscheme solarized
 
 set grepprg=grep\ -nH\ $*
 
-let g:solarized_bold = 1
-let g:solarized_underline = 1 
-let g:solarized_italic = 1
-let g:solarized_contrast = "high"
-let g:solarized_visibility= "high"
+colorscheme gruvbox
+
+" colorscheme solarized
+" let g:solarized_bold = 1
+" let g:solarized_underline = 1 
+" let g:solarized_italic = 1
+" let g:solarized_contrast = "high"
+" let g:solarized_visibility= "high"
 
 set encoding=utf-8
 set cindent
@@ -224,15 +235,23 @@ let hscoptions="𝐒𝐓𝐄𝐌xRtB𝔻w"
 
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-"python with virtualenv support
-"py << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  execfile(activate_this, dict(__file__=activate_this))
-"EOF
+" python with virtualenv support
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"   project_base_dir = os.environ['VIRTUAL_ENV']
+"   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"   execfile(activate_this, dict(__file__=activate_this))
+" EOF
+
+
+set hidden
+let g:racer_cmd="racer"
+
+let g:racer_experimental_completer=1
+
+autocmd FileType rust let g:deoplete#enable_at_startup = 1
 
 let python_highlight_all=1
 
@@ -240,7 +259,6 @@ set breakindent "showbreak=..
 set linebreak
 "set foldmethod=indent foldcolumn=4
 set shiftwidth=4 tabstop=4 softtabstop=4 " expandtab
-
 set laststatus=2
 
 autocmd FileType tex setlocal breakindent "showbreak=..
@@ -258,3 +276,6 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'cd build && make clean && find . -delete && cmake .. && make && mv $*.pdf ..'
 
 "'./build.sh' "'mkdir -p build && pdflatex -output-directory=build -interaction=nonstopmode $* && cp *.bib build && cd build && bibtex %:r && cd .. && pdflatex -output-directory=build -interaction=nonstopmode $* && mv build/$*.pdf .'
+
+" CTRL - P -- Options
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/deb_dist/*,*/dist/*,tags

@@ -12,12 +12,18 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'Shougo/deoplete.nvim', {'for': 'rust'}
+
+Plugin 'tmhedberg/SimpylFold'
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jnurmine/Zenburn'
+Plugin 'morhetz/gruvbox'
 
 " Support bundles
 "Plugin 'jgdavey/tslime.vim'
@@ -42,16 +48,23 @@ Plugin 'eagletmt/neco-ghc'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'mpickering/hlint-refactor-vim'
 
+" RUST
+Plugin 'racer-rust/vim-racer'
+Plugin 'rust-lang/rust.vim'
+
 " Prolog
 Plugin 'adimit/prolog.vim'
 
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'nvie/vim-flake8'
 
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 
+Plugin 'gyim/vim-boxdraw'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
