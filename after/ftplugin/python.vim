@@ -13,6 +13,7 @@ let b:ale_fixers = ['add_blank_lines_for_python_control_statements', 'autopep8',
 			\ 'trim_whitespace']
 let g:ale_warn_about_trailing_whitespace = 1
 let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'always'
 
 "g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_docstring = 0
