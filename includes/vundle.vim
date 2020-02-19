@@ -12,13 +12,13 @@ Plugin 'gmarik/Vundle.vim'
 
 " GENERAL
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugin 'vim-syntastic/syntastic'
-Plugin 'dense-analysis/ale'
+" Plugin 'dense-analysis/ale'
 
 " AUTOCOMPLETION
 Plugin 'Valloric/YouCompleteMe'
 
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " LATEX and PANDOC and MARKDOWN
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
