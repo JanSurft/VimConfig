@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'vim-syntastic/syntastic'
 " Plugin 'dense-analysis/ale'
+Plugin 'wgwoods/vim-systemd-syntax'
 
 " AUTOCOMPLETION
 Plugin 'Valloric/YouCompleteMe'

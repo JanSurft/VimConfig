@@ -9,7 +9,7 @@ setlocal fileformat=unix
 
 let b:ale_linters = {'python': ['bandit', 'mypy', 'flake8', 'pylama', 'pylint']}
 let b:ale_fixers = ['add_blank_lines_for_python_control_statements', 'autopep8',
-			\ 'black', 'isort', 'reorder-python-imports', 'yapf', 'remove_trailing_lines',
+			\ 'black', 'isort', 'reorder-python-imports', 'remove_trailing_lines',
 			\ 'trim_whitespace']
 let g:ale_warn_about_trailing_whitespace = 1
 let g:ale_fix_on_save = 1
