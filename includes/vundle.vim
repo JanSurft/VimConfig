@@ -19,6 +19,8 @@ Plugin 'wgwoods/vim-systemd-syntax'
 " AUTOCOMPLETION
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " LATEX and PANDOC and MARKDOWN
 Plugin 'vim-pandoc/vim-pandoc'
