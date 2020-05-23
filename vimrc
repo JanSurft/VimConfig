@@ -2,6 +2,8 @@ let $VIMHOME = $HOME."/.vim"
 
 source $VIMHOME/includes/vundle.vim
 
+source $VIMHOME/includes/basic-map.vim 
+
 source $VIMHOME/includes/basics.vim
 
 source $VIMHOME/includes/patches.vim

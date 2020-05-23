@@ -15,6 +15,9 @@ let g:ale_warn_about_trailing_whitespace = 1
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'always'
 
+let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")'"
+let g:ale_python_flake8_options = '--max-line-length=120'
+
 "g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_docstring = 0
 let g:SimpylFold_fold_import = 0
