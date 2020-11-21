@@ -28,6 +28,8 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'dkarter/bullets.vim'
 Plugin 'gyim/vim-boxdraw'
 " Plugin 'ashisha/image.vim'
+Plugin 'KeitaNakamura/tex-conceal.vim'
+
 
 " GIT
 Plugin 'tpope/vim-fugitive'
