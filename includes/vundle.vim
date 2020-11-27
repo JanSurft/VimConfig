@@ -10,6 +10,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" KOTLIN
+Plugin 'udalov/kotlin-vim'
+
 " GENERAL
 Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'vim-syntastic/syntastic'
@@ -27,6 +30,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'dkarter/bullets.vim'
 Plugin 'gyim/vim-boxdraw'
+Plugin 'KeitaNakamura/tex-conceal.vim'
 " Plugin 'ashisha/image.vim'
 
 " GIT
@@ -46,6 +50,10 @@ Plugin 'nvie/vim-flake8'
 " RUST
 Plugin 'rust-lang/rust.vim', { 'for': 'rust' }
 Plugin 'racer-rust/vim-racer', { 'for': 'rust' }
+
+
+" C / C++
+Plugin 'tikhomirov/vim-glsl'
 
 
 " COLORS

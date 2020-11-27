@@ -1,6 +1,7 @@
 let mapleader=","
 
 inoremap jk <ESC>l
+tnoremap jk <C-\><C-n>
 
 " Allow the normal use of "," by pressing it twice
 noremap ,, ,
