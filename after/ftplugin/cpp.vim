@@ -1,6 +1,6 @@
-let g:ale_completion_enabled = 0
+" let g:ale_completion_enabled = 1
 
-let b:ale_linters = {'cpp': ['clangcheck', 'clangtidy']}
+" let b:ale_linters = {'cpp': ['clangcheck', 'clangtidy']}
 let b:ale_fixers = ['clang-format', 'remove_trailing_lines', 'trim_whitespace', 'uncrustify']
 
 let g:ale_warn_about_trailing_whitespace = 1

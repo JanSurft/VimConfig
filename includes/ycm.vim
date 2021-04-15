@@ -3,3 +3,7 @@ map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_key_list_select_completion = ['<TAB>','<Down>','<Enter>']
 let g:ycm_autoclose_preview_window_after_completion=1
 
+" let g:ycm_filetype_blacklist = { 'cpp': 1 }
+"
+let g:ale_completion_enabled = 0
+

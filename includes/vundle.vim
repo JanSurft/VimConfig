@@ -26,6 +26,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " LATEX and PANDOC and MARKDOWN
+"
+Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'dkarter/bullets.vim'
