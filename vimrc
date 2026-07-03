@@ -1,5 +1,7 @@
 let $VIMHOME = $HOME."/.vim"
 
+" :breakadd file $VIMHOME/bundle/YouCompleteMe/plugin/youcompleteme.vim
+
 source $VIMHOME/includes/vundle.vim
 
 source $VIMHOME/includes/basic_maps.vim

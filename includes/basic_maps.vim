@@ -41,4 +41,4 @@ vmap <leader>d "*d
 nmap <leader>p "*p
 vmap <leader>p "*p
 
-
+set clipboard+=unnamed
